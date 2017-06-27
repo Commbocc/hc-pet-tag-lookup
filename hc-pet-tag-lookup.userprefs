@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{DBD01DF0-D8B2-4EDC-9EF7-3A86E870EEF7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AnimalsController.cs">
+    <Files>
+      <File FileName="Controllers/AnimalsController.cs" Line="28" Column="32" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.hc-pet-tag-lookup PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

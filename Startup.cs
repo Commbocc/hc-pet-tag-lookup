@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using hc_pet_tag_lookup.Models;
 
 namespace hc_pet_tag_lookup
 {
@@ -27,7 +29,12 @@ namespace hc_pet_tag_lookup
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connStr = Configuration.GetConnectionString("DefaultConnection");
+            // Console.WriteLine(Environment.ExpandEnvironmentVariables(connStr));
+            
             // Add framework services.
+			services.AddDbContext<AnimalContext>(opt => opt.UseSqlServer(Environment.ExpandEnvironmentVariables(connStr)));
+
             services.AddMvc();
         }
 
