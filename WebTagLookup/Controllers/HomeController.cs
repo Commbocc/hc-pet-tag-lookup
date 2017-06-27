@@ -21,9 +21,7 @@ namespace WebTagLookup.Controllers
             if (ModelState.IsValid)
             {
                 ModelState.Clear();
-                ViewData.Model = tl.getTagInfo();
-
-                return PartialView("_TagInfo");
+                Return Content(tl.getTagInfo());
             }
             else
             {
