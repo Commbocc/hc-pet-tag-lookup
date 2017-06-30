@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using hc_pet_tag_lookup.Models;
 
 namespace hc_pet_tag_lookup.Controllers
@@ -19,6 +20,7 @@ namespace hc_pet_tag_lookup.Controllers
 
         // GET api/animals/search/:term
         [HttpGet("search/{term}")]
+        [EnableCors("AllowAll")]
         public ActionResult Search(string term, int page=1)
         {
             if (String.IsNullOrEmpty(term))
