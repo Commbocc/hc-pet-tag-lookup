@@ -8,14 +8,13 @@ namespace hc_pet_tag_lookup.Controllers
     [Route("api/[controller]")]
     public class AnimalsController : Controller
     {
-
         private readonly AnimalContext _context;
         private static int _maxResults;
 
         public AnimalsController(AnimalContext context)
         {
             _context = context;
-            _maxResults = 10;
+            _maxResults = 25;
         }
 
         // GET api/animals/search/:term
