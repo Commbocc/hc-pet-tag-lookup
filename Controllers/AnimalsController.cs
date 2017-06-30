@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using hc_pet_tag_lookup.Models;
 
@@ -20,7 +18,7 @@ namespace hc_pet_tag_lookup.Controllers
             _maxResults = 10;
         }
 
-        // GET api/animals
+        // GET api/animals/search/:term
         [HttpGet("search/{term}")]
         public ActionResult Search(string term, int page=1)
         {
