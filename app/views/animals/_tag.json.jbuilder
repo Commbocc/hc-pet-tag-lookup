@@ -1,1 +1,1 @@
-json.extract! tag, :TagNumber, :TagExpire, :VacExpire
+json.extract! tag, :TagNumber, :TagExpire

@@ -1,1 +1,1 @@
-json.extract! owner, :FirstName, :LastName, :Phone
+json.extract! owner, :person_id, :FirstName, :LastName, :Phone
