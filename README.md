@@ -11,6 +11,7 @@ export ANIMAL_DB_SERVER = "YOUR_SERVER_NAME"
 export ANIMAL_DB_DB = "YOUR_DATABASE"
 export ANIMAL_DB_USER = "YOUR_USERNAME"
 export ANIMAL_DB_PASS = "YOUR_PASSWORD"
+export ANIMAL_DB_TABLE = "YOUR_TABLE_NAME"
 ```
 
 ``` bash
@@ -25,7 +26,7 @@ rails s -p 5000
 
 Create a `docker-compose.yml` file with the YAML code below.
 
-* Replace `8080` with the host's port you'd like the app to be served on.
+* Replace `5000` with the host's port you'd like the app to be served on.
 * Replace the `ANIMAL_DB_*` environment variables.
 
 ``` yaml
