@@ -45,7 +45,7 @@ services:
            ANIMAL_DB_TABLE: "YOUR_TABLE_NAME"
 ```
 
-Run the following commands to start the app in a [`ruby`](https://hub.docker.com/r/microsoft/dotnet/) Docker container.
+Run the following commands to start the app in a [`ruby`](https://hub.docker.com/_/ruby/) Docker container.
 
 ``` bash
 # Docker Compose
