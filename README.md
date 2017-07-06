@@ -34,7 +34,7 @@ version: "3"
 services:
     web:
         build: .
-        command: rails s -p 3000
+        command: rails s -p 3000 -b 0.0.0.0
         ports:
             - "5000:3000"
         environment:
