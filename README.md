@@ -43,7 +43,7 @@ services:
            ANIMAL_DB_PASS: "YOUR_PASSWORD"
 ```
 
-Run the following commands to start the app in a [`microsoft/dotnet`](https://hub.docker.com/r/microsoft/dotnet/) Docker container.
+Run the following commands to start the app in a [`microsoft/dotnet`](https://store.docker.com/images/dotnet) Docker container.
 
 ``` bash
 # install dependencies
