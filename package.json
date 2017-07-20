@@ -11,6 +11,7 @@
     "push-gh": "git subtree push --prefix dist github gh-pages"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
     "vue": "^2.3.3",
     "vue-resource": "^1.3.4",
     "vue-router": "^2.3.1",
