@@ -1,23 +1,24 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-  </div>
+	<div id="app">
+
+		<!-- <details><pre>{{ $store.state }}</pre></details> -->
+
+		<search-form></search-form>
+		<search-results></search-results>
+
+		<!-- <router-view></router-view> -->
+	</div>
 </template>
 
 <script>
+import SearchForm from '@/components/SearchForm'
+import SearchResults from '@/components/SearchResults'
+
 export default {
-  name: 'app'
+	name: 'app',
+	components: {
+		'search-form': SearchForm,
+		'search-results': SearchResults
+	}
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
