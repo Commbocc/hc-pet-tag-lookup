@@ -17,6 +17,7 @@ export default class Animal {
 
     this.license = {
       number: x.TagNumber,
+      status: x.TagStatus,
       expiration: this.constructor.formatDate(x.TagExpDate)
     }
 
