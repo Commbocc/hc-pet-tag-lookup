@@ -1,10 +1,10 @@
 <template>
 	<div id="app">
 
-		<!-- <details><pre>{{ $store.state }}</pre></details> -->
+		<!-- <details open><pre>{{ $store.state }}</pre></details> -->
 
-		<search-form></search-form>
-		<search-results></search-results>
+		<SearchForm/>
+		<SearchResults/>
 
 		<!-- <router-view></router-view> -->
 	</div>
@@ -17,8 +17,8 @@ import SearchResults from '@/components/SearchResults'
 export default {
 	name: 'app',
 	components: {
-		'search-form': SearchForm,
-		'search-results': SearchResults
+		SearchForm,
+		SearchResults
 	}
 }
 </script>
