@@ -3,12 +3,11 @@ var prodEnv = require('./prod.env')
 
 var devEnvVars = {
 	NODE_ENV: '"development"',
-	CORS_PROXY_PORT: 8081,
-	init: function() {
-		// this.PET_API_ENDPOINT = `http://localhost:${this.CORS_PROXY_PORT}/http://webappsnet-dev.hillsboroughcounty.org/pettagsearch/api/Animals"`
-		this.PET_API_ENDPOINT = `"http://localhost:${this.CORS_PROXY_PORT}/https://webappsnet.hillsboroughcounty.org/pettagsearch/api/Animals"`
-		return this
+	PET_API_ENDPOINT: '"/pettagsearch/api/Animals"',
+	PROXY_API_ENDPOINT: function() {
+		var useProdApiInDev = false // server restart required
+		return (useProdApiInDev) ? 'https://webappsnet.hillsboroughcounty.org/pettagsearch/api/Animals' : 'http://webappsnet-dev.hillsboroughcounty.org/pettagsearch/api/Animals'
 	}
-}.init()
+}
 
 module.exports = merge(prodEnv, devEnvVars)

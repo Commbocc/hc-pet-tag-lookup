@@ -87,13 +87,3 @@ module.exports = {
     server.close()
   }
 }
-
-// dev CORs proxy
-var cors_proxy = require('cors-anywhere')
-var cors_host = '127.0.0.1'
-var cors_port = config.dev.env.CORS_PROXY_PORT
-cors_proxy.createServer({
-  originWhitelist: [] // all
-}).listen(cors_port, cors_host, function() {
-  console.log(`Running CORS Anywhere on ${cors_host}:${cors_port}`)
-})
