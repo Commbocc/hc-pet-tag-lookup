@@ -1,21 +1,20 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
-Vue.use(Vuex)
+import Animal from '../models/animal'
 
-const pets = {
+export default {
 	state: {
 		inputPlaceholder: 'License or Microchip Number...',
 		isLoadingResults: false,
 		hasSearched: false,
 		searchTerm: null,
-		searchResults: null,
+		searchResults: []
 		// searchResultsPage: 1,
 	},
 	actions: {
 		searchPets ({state, commit}) {
 			commit('setIsLoading', true)
 			commit('setHasSearched', true)
-			Vue.http.get(`${process.env.PET_API_ENDPOINT}/${state.searchTerm}`).then( response => {
+			return Vue.http.get(`${process.env.PET_API_ENDPOINT}/${state.searchTerm}`).then( response => {
 				commit('setSearchResults', response.body)
 				commit('setIsLoading', false)
 			}).catch( err => {
@@ -32,13 +31,7 @@ const pets = {
 			state.hasSearched = data
 		},
 		setSearchResults (state, data) {
-			state.searchResults = data
+			state.searchResults = data.map(x => new Animal(x))
 		}
 	}
 }
-
-export default new Vuex.Store({
-	modules: {
-		pets
-	}
-})
