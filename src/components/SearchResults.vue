@@ -42,9 +42,6 @@
 								<dt>License</dt>
 								<dd>{{ animal.license.number }}</dd>
 
-								<dt>Status</dt>
-								<dd>{{ animal.license.status }}</dd>
-
 								<dt>License Expiration</dt>
 								<dd>{{ animal.license.expiration }}</dd>
 
