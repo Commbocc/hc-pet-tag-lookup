@@ -5,7 +5,7 @@ if (import.meta.env.DEV) input.value = "123456";
 
 <template>
   <form @submit.prevent="fetchPets">
-    <div class="mb-3 input-group">
+    <div class="input-group">
       <div class="input-group input-group-lg">
         <input
           v-model="input"
