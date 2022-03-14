@@ -7,14 +7,14 @@ const formatPhone = (phone: number) => {
 </script>
 
 <template>
-  <section class="mt-3">
-    <div v-if="pets.loading" class="d-flex justify-content-center">
+  <section>
+    <div v-if="pets.loading" class="d-flex justify-content-center mt-3">
       <div class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
 
-    <div v-else-if="pets.data?.length">
+    <div v-else-if="pets.data?.length" class="mt-3">
       <div class="accordion" id="accordion">
         <!--  -->
         <div v-for="(animal, index) in pets.data" class="accordion-item">
@@ -74,7 +74,7 @@ const formatPhone = (phone: number) => {
       </div>
     </div>
 
-    <div v-else-if="pets.data !== null">
+    <div v-else-if="pets.data !== null" class="mt-3">
       <p class="h2 text-center">No Results</p>
     </div>
   </section>
