@@ -7,7 +7,7 @@ const formatPhone = (phone: number) => {
 </script>
 
 <template>
-  <section>
+  <section class="mt-3">
     <div v-if="pets.loading" class="d-flex justify-content-center">
       <div class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
