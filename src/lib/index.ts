@@ -1,6 +1,6 @@
 import { computed, reactive, ref, watch } from "vue";
 import Animal from "./models/animal";
-import { __hc } from "./types";
+import { IPetsReactive } from "./types";
 
 const PETS_API_ENDPOINT =
   "https://app.hillsboroughcounty.org/PetTagSearch/api/Animals";
@@ -13,7 +13,7 @@ watch(input, () => {
 
 const url = computed(() => `${PETS_API_ENDPOINT}/${input.value}`);
 
-export const pets = reactive<__hc.PetTagLookup.IPetsReactive>({
+export const pets = reactive<IPetsReactive>({
   loading: false,
   error: "",
   data: null,

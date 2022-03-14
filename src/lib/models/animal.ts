@@ -1,12 +1,14 @@
+import { IOwner, ILicense, IVaccine } from "../types";
+
 export default class Animal {
   name: string;
   type: string;
   color: string;
   breed: string;
-  owner: __hc.PetTagLookup.Animal.IOwner;
+  owner: IOwner;
   microchip?: string;
-  license?: __hc.PetTagLookup.Animal.ILicense;
-  vaccine: __hc.PetTagLookup.Animal.IVaccine;
+  license: ILicense;
+  vaccine: IVaccine;
 
   constructor(x: any) {
     this.name = x.PetName;

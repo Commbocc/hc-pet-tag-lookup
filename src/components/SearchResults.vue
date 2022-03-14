@@ -53,8 +53,10 @@ const formatPhone = (phone: number) => {
                   {{ formatPhone(animal.owner.phone) }}
                 </dd>
 
-                <dt>Microchip</dt>
-                <dd>{{ animal.microchip }}</dd>
+                <template v-if="animal.microchip">
+                  <dt>Microchip</dt>
+                  <dd>{{ animal.microchip }}</dd>
+                </template>
 
                 <dt>License</dt>
                 <dd>{{ animal.license.number }}</dd>
