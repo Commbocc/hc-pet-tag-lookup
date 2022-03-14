@@ -8,7 +8,7 @@ interface IPetsReactive {
 
 interface IOwner {
   name: string;
-  phone: number | null;
+  phone: string | null;
 }
 
 interface ILicense {
