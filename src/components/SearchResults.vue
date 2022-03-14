@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import { pets } from "../lib";
-
-const formatPhone = (phone: number) => {
-  return phone.toString().replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
-};
 </script>
 
 <template>
@@ -45,13 +41,17 @@ const formatPhone = (phone: number) => {
           >
             <div class="accordion-body">
               <dl>
-                <dt>Owner(s)</dt>
-                <dd>{{ animal.owner.name }}</dd>
+                <template v-if="animal.owner.name">
+                  <dt>Owner(s)</dt>
+                  <dd>{{ animal.owner.name }}</dd>
+                </template>
 
-                <dt>Contact</dt>
-                <dd>
-                  {{ formatPhone(animal.owner.phone) }}
-                </dd>
+                <template v-if="animal.owner.phone">
+                  <dt>Contact</dt>
+                  <dd>
+                    {{ animal.owner.phone }}
+                  </dd>
+                </template>
 
                 <template v-if="animal.microchip">
                   <dt>Microchip</dt>
@@ -62,10 +62,10 @@ const formatPhone = (phone: number) => {
                 <dd>{{ animal.license.number }}</dd>
 
                 <dt>License Expiration</dt>
-                <dd>{{ animal.license.expiration }}</dd>
+                <dd>{{ animal.license.expiration.toLocaleDateString() }}</dd>
 
                 <dt>Vaccine Expiration</dt>
-                <dd>{{ animal.vaccine.expiration }}</dd>
+                <dd>{{ animal.vaccine.expiration.toLocaleDateString() }}</dd>
               </dl>
             </div>
           </div>

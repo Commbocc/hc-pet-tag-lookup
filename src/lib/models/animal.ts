@@ -34,7 +34,10 @@ export default class Animal {
     };
   }
 
-  formatPhone(phone: string): number {
-    return parseInt(phone.replace(/\D+/g, ""));
+  formatPhone(phone: string): string | null {
+    if (!phone) return null;
+    return phone
+      .replace(/\D+/g, "")
+      .replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
   }
 }
