@@ -16,7 +16,7 @@ if (import.meta.env.DEV) input.value = "123456";
           aria-label="License or Microchip number"
           aria-describedby="submitButton"
         />
-        <button id="submitButton" class="btn btn-primary" type="submit">
+        <button id="submitButton" class="btn btn-outline-secondary" type="submit">
           Search
         </button>
       </div>
