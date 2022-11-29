@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { pets } from '../lib'
+import { pets } from "../lib";
 </script>
 
 <template>
@@ -61,10 +61,22 @@ import { pets } from '../lib'
               <dd>{{ animal.license.number }}</dd>
 
               <dt>License Expiration</dt>
-              <dd>{{ animal.license.expiration.toLocaleDateString() }}</dd>
+              <dd>
+                {{
+                  animal.license.expiration
+                    ? new Date(animal.license.expiration).toLocaleDateString()
+                    : "BLANK"
+                }}
+              </dd>
 
               <dt>Vaccine Expiration</dt>
-              <dd>{{ animal.vaccine.expiration.toLocaleDateString() }}</dd>
+              <dd>
+                {{
+                  animal.vaccine.expiration
+                    ? new Date(animal.vaccine.expiration).toLocaleDateString()
+                    : "BLANK"
+                }}
+              </dd>
             </dl>
           </div>
         </div>

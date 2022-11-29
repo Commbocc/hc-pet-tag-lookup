@@ -14,9 +14,9 @@ interface IOwner {
 interface ILicense {
   number: string;
   status: string;
-  expiration: Date;
+  expiration: string | null;
 }
 
 interface IVaccine {
-  expiration: Date | string;
+  expiration: string | null;
 }

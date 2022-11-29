@@ -26,11 +26,11 @@ export default class Animal {
     this.license = {
       number: x.TagNumber,
       status: x.TagStatus,
-      expiration: new Date(x.TagExpDate),
+      expiration: x.TagExpDate,
     };
 
     this.vaccine = {
-      expiration: x.VacExpDate ? new Date(x.VacExpDate) : 'BLANK',
+      expiration: x.VacExpDate,
     };
   }
 
