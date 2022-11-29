@@ -60,23 +60,19 @@ import { pets } from "../lib";
               <dt>License</dt>
               <dd>{{ animal.license.number }}</dd>
 
-              <dt>License Expiration</dt>
-              <dd>
-                {{
-                  animal.license.expiration
-                    ? new Date(animal.license.expiration).toLocaleDateString()
-                    : "BLANK"
-                }}
-              </dd>
+              <template v-if="animal.license.expiration">
+                <dt>License Expiration</dt>
+                <dd>
+                  {{ new Date(animal.license.expiration).toLocaleDateString() }}
+                </dd>
+              </template>
 
-              <dt>Vaccine Expiration</dt>
-              <dd>
-                {{
-                  animal.vaccine.expiration
-                    ? new Date(animal.vaccine.expiration).toLocaleDateString()
-                    : "BLANK"
-                }}
-              </dd>
+              <template v-if="animal.vaccine.expiration">
+                <dt>Vaccine Expiration</dt>
+                <dd>
+                  {{ new Date(animal.vaccine.expiration).toLocaleDateString() }}
+                </dd>
+              </template>
             </dl>
           </div>
         </div>
