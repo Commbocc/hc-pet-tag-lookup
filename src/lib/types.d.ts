@@ -18,5 +18,5 @@ interface ILicense {
 }
 
 interface IVaccine {
-  expiration: Date;
+  expiration: Date | string;
 }
