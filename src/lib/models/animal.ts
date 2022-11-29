@@ -30,7 +30,7 @@ export default class Animal {
     };
 
     this.vaccine = {
-      expiration: new Date(x.VacExpDate),
+      expiration: x.VacExpDate ? new Date(x.VacExpDate) : 'BLANK',
     };
   }
 
