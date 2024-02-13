@@ -5,11 +5,11 @@ if (import.meta.env.DEV) input.value = "123456";
 </script>
 
 <template>
+  <h1>Pet Tag Lookup Tool</h1>
+
   <form @submit.prevent="fetchPets">
     <div class="input-group">
       <div class="input-group input-group-lg">
-        <h1></h1>
-
         <input
           v-model="input"
           class="form-control"
