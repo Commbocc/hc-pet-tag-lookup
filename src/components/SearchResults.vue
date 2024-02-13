@@ -11,7 +11,6 @@ import { pets } from "../lib";
 
   <div v-else-if="pets.data?.length">
     <div class="accordion" id="accordion">
-      <!--  -->
       <div v-for="(animal, index) in pets.data" class="accordion-item">
         <h2 class="accordion-header" :id="`heading${index}`">
           <button
@@ -32,6 +31,7 @@ import { pets } from "../lib";
             </small>
           </button>
         </h2>
+
         <div
           :id="`collapse${index}`"
           class="accordion-collapse collapse"
@@ -42,11 +42,13 @@ import { pets } from "../lib";
             <dl>
               <template v-if="animal.owner.name">
                 <dt>Owner(s)</dt>
+
                 <dd>{{ animal.owner.name }}</dd>
               </template>
 
               <template v-if="animal.owner.phone">
                 <dt>Contact</dt>
+
                 <dd>
                   {{ animal.owner.phone }}
                 </dd>
@@ -54,14 +56,17 @@ import { pets } from "../lib";
 
               <template v-if="animal.microchip">
                 <dt>Microchip</dt>
+
                 <dd>{{ animal.microchip }}</dd>
               </template>
 
               <dt>License</dt>
+
               <dd>{{ animal.license.number }}</dd>
 
               <template v-if="animal.license.expiration">
                 <dt>License Expiration</dt>
+
                 <dd>
                   {{ new Date(animal.license.expiration).toLocaleDateString() }}
                 </dd>
@@ -69,6 +74,7 @@ import { pets } from "../lib";
 
               <template v-if="animal.vaccine.expiration">
                 <dt>Vaccine Expiration</dt>
+
                 <dd>
                   {{ new Date(animal.vaccine.expiration).toLocaleDateString() }}
                 </dd>
@@ -77,7 +83,6 @@ import { pets } from "../lib";
           </div>
         </div>
       </div>
-      <!--  -->
     </div>
   </div>
 
