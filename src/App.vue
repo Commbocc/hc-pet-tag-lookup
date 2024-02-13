@@ -4,7 +4,7 @@ import SearchResults from "./components/SearchResults.vue";
 
 const containerClass = import.meta.env.DEV
   ? "py-5 container"
-  : "container-fluid pt-6 pb-4";
+  : "container-fluid pt-6 pb-2";
 </script>
 
 <template>
